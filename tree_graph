@@ -1,0 +1,13 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="IsActiveMember <= 0.5\nentropy = 0.696\nsamples = 16\nvalue = [13, 3]\nclass = Not Resigned", fillcolor="#eb9e67"] ;
+1 [label="Tenure <= 2.5\nentropy = 0.811\nsamples = 4\nvalue = [1, 3]\nclass = Resigned", fillcolor="#7bbeee"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="entropy = 0.0\nsamples = 1\nvalue = [1, 0]\nclass = Not Resigned", fillcolor="#e58139"] ;
+1 -> 2 ;
+3 [label="entropy = 0.0\nsamples = 3\nvalue = [0, 3]\nclass = Resigned", fillcolor="#399de5"] ;
+1 -> 3 ;
+4 [label="entropy = 0.0\nsamples = 12\nvalue = [12, 0]\nclass = Not Resigned", fillcolor="#e58139"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

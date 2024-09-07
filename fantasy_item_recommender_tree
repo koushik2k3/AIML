@@ -1,0 +1,34 @@
+digraph {
+	Start [shape=box]
+	Warrior [shape=ellipse]
+	Mage [shape=ellipse]
+	Rogue [shape=ellipse]
+	Healer [shape=ellipse]
+	Offensive [shape=diamond]
+	Defensive [shape=diamond]
+	Supportive [shape=diamond]
+	Stealthy [shape=diamond]
+	"Dragon Scale Armor" [shape=box]
+	"Enchanted Amulet of Wisdom" [shape=box]
+	"Elven Potion of Speed" [shape=box]
+	"Cloak of Shadows" [shape=box]
+	"Staff of Healing" [shape=box]
+	Start -> Warrior
+	Start -> Mage
+	Start -> Rogue
+	Start -> Healer
+	Warrior -> Offensive
+	Warrior -> Defensive
+	Mage -> Offensive
+	Mage -> Supportive
+	Rogue -> Offensive
+	Rogue -> Stealthy
+	Healer -> Offensive
+	Healer -> Supportive
+	Offensive -> "Dragon Scale Armor" [label=Warrior]
+	Offensive -> "Elven Potion of Speed" [label="Mage, Rogue"]
+	Offensive -> "Staff of Healing" [label=Healer]
+	Defensive -> "Enchanted Amulet of Wisdom"
+	Supportive -> "Enchanted Amulet of Wisdom"
+	Stealthy -> "Cloak of Shadows"
+}
